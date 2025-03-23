@@ -2,3 +2,7 @@
 /cmake-build-debug/
 .DS_Stroe
 .vscode
+**CMakeFiles/
+**Makefile
+**CMakeCache.txt
+cmake_install.cmake
