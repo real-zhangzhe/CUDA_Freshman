@@ -171,7 +171,7 @@ int main(int argc, char **argv) {
   iElaps = cpuSecond() - iStart;
   printf(" Time elapsed %f sec\n", iElaps);
   CHECK(cudaMemcpy(B_host, B_dev, nBytes, cudaMemcpyDeviceToHost));
-  checkResult(B_host, B_host, nxy);
+  checkResult(A_host, B_host, nxy);
 
   cudaFree(A_dev);
   cudaFree(B_dev);
