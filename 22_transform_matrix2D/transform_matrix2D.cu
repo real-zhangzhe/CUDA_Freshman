@@ -5,7 +5,7 @@
 void transformMatrix2D_CPU(float *MatA, float *MatB, int nx, int ny) {
   for (int j = 0; j < ny; j++) {
     for (int i = 0; i < nx; i++) {
-      MatB[i * nx + j] = MatA[j * nx + i];
+      MatB[i * ny + j] = MatA[j * nx + i];
     }
   }
 }
@@ -98,7 +98,7 @@ int main(int argc, char **argv) {
   printf("strating...\n");
   initDevice(0);
   int nx = 1 << 12;
-  int ny = 1 << 12;
+  int ny = 1 << 11;
   int dimx = 32;
   int dimy = 32;
   int nxy = nx * ny;
